@@ -18,7 +18,7 @@ const fetchAndBroadcast = async () => {
   }
   // parse pubkey ('npub' or hexa)
   const pubkey = parsePubkey($('#pubkey').val())
-  const kinds_in = parsePubkey($('#kinds').val())
+  const kinds_in = $('#kinds').val()
   if (!pubkey) return
   if (!kinds_in) kinds_in = '0,1,2,3,4,5,6,7'
   kinds_in = kinds_in.split(",").map(Number)
